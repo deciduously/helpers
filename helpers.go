@@ -1,12 +1,13 @@
 package helpers
 
 import (
-  "fmt"
-  "strconv"
+	"fmt"
 	"log"
+	"strconv"
 )
 
-func checkErr(e error) {
+//CheckErr logs a fatal error if error e exists
+func CheckErr(e error) {
 	if e != nil {
 		log.Fatalln(e)
 	}
