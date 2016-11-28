@@ -3,7 +3,14 @@ package helpers
 import (
   "fmt"
   "strconv"
+	"log"
 )
+
+func checkErr(e error) {
+	if e != nil {
+		log.Fatalln(e)
+	}
+}
 
 //GetInt attempts to retrieve an integer from the user
 func GetInt() int {
